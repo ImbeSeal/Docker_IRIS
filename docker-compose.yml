@@ -1,0 +1,62 @@
+version: "3.9"
+
+services:
+
+  mysql:
+    image: mysql:5.7.38
+    environment:
+      MYSQL_DATABASE: 'docker_iris'
+      MYSQL_ROOT_PASSWORD: Password123#@!
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_HOST: 'localhost'
+    ports: 
+      - '3308:3306'
+    volumes:
+      - docker_iris-mysql:/var/lib/mysql/data
+
+  redis:
+    image: redis:7.0
+    ports:
+      - '6379:6379'
+    volumes:
+      - docker_iris-redis:/var/lib/redis/data
+
+  docker_iris:
+    build:
+      context: .
+    volumes:
+      - ./Docker_IRIS:/opt/app
+    links:
+      - mysql
+      - redis
+    ports:
+      - '8010:8010'
+    env_file:
+      - .env
+
+  sidekiq:
+    build:
+      context: .
+    command: bundle exec sidekiq 
+    links:
+      - mysql
+      - redis
+    env_file:
+      - .env
+
+  nginx:
+    image: docker_iris/nginx:0.1
+    build:
+      context: .
+      dockerfile: ./Dockerfile.nginx
+    links:
+      - docker_iris
+    ports:
+      - "8080:80"
+      - "443:443"
+
+volumes:
+  docker_iris-mysql:
+  docker_iris-redis:
+  bundle:

@@ -1,0 +1,41 @@
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `shop1_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `shop1_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('4103367137455831560', 0)[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('4103367137455831560')[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/bin/rake:25
+Started GET "/" for ::1 at 2022-06-04 12:10:04 +0530
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/imbeseal/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ShopsController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-06-04 12:10:04 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/imbeseal/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/imbeseal/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /home/imbeseal/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 1939ms (Views: 1929.6ms | ActiveRecord: 2.0ms)
+
+

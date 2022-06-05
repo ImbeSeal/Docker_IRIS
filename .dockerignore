@@ -1,0 +1,6 @@
+.git
+.dockerignore
+.env
+Docker_IRIS/node_modules/
+Docker_IRIS/vendor/bundle/
+Docker_IRIS/tmp/
