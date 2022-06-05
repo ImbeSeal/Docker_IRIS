@@ -49,12 +49,21 @@ services:
     image: docker_iris/nginx:0.1
     build:
       context: .
-      dockerfile: ./Dockerfile.nginx
+      dockerfile: ./nginx.dockerfile
+    depends_on:
+        - api
     links:
       - docker_iris
     ports:
       - "8080:80"
       - "443:443"
+    restart: always
+
+  api:
+    build: .
+    environment:
+      NODE_ENV: production
+    restart: always
 
 volumes:
   docker_iris-mysql:

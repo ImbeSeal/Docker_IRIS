@@ -15,15 +15,13 @@ AUTHOR: SAKET ZINGADE
 -> updated database.yml
 -> created secrets.yml
 
--> created reverse-proxy.conf
--> Dockerfie.nginx specifically for nginx
+-> created nginx.conf
+-> nginx.dockerfie specifically for nginx
 -> running docker compose up -d
     creates the images required (Screenshot_1.png)
--> running docker compose up --build
-FOLLOWING ERROR:
-=> ERROR [docker_iris/nginx:0.1  9/13] ADD config/test.conf /etc/nginx/conf.d/reverse-proxy.con  0.0s
-=> ERROR [docker_iris/nginx:0.1 10/13] ADD config/test.conf /etc/nginx/sites-available/test      0.0s
-=> ERROR [docker_iris/nginx:0.1 11/13] COPY reverse-proxy.conf /etc/nginx/conf.d/reverse-proxy.  0.0s
 
-failed to solve: failed to compute cache key: "/reverse-proxy.conf" not found: not found
-(Screenshot_2.png)
+-> script.js and nodeapp.js created for nginx to load balance multiple containers
+
+-> created cron job .my.cnf
+
+nginx/stable does not have a release file for Ubuntu 22.04 hence docker compose up --build fails
